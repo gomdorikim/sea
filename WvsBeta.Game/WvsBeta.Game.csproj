@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9AAD2566-35DD-481E-B87C-A8CD7D80BE9E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WvsBeta.Game</RootNamespace>
+    <AssemblyName>WvsBeta.Game</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BinSvr\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BinSvr\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mysql.Data">
+      <HintPath>..\Mysql.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuffDataProvider.cs" />
+    <Compile Include="CenterSocket.cs" />
+    <Compile Include="Characters\Buddy.cs" />
+    <Compile Include="Characters\Character Modifiers.cs" />
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\CharacterBuddyList.cs" />
+    <Compile Include="Characters\CharacterBuffs.cs" />
+    <Compile Include="Characters\CharacterGameStats.cs" />
+    <Compile Include="Characters\CharacterInventory.cs" />
+    <Compile Include="Characters\CharacterPets.cs" />
+    <Compile Include="Characters\CharacterPrimaryStats.cs" />
+    <Compile Include="Characters\CharacterQuests.cs" />
+    <Compile Include="Characters\CharacterRandom.cs" />
+    <Compile Include="Characters\CharacterSkills.cs" />
+    <Compile Include="Characters\CharacterStorage.cs" />
+    <Compile Include="Characters\CharacterSummons.cs" />
+    <Compile Include="Characters\CharacterVariables.cs" />
+    <Compile Include="Characters\ClientSocket.cs" />
+    <Compile Include="Characters\Player.cs" />
+    <Compile Include="CheatInspector.cs" />
+    <Compile Include="CommandHandling.cs" />
+    <Compile Include="Events\Boats.cs" />
+    <Compile Include="Events\EventObjects\Coconut.cs" />
+    <Compile Include="Events\EventObjects\Jewel.cs" />
+    <Compile Include="Events\EventObjects\Ship.cs" />
+    <Compile Include="Events\GMEvents\CoconutHarvest.cs" />
+    <Compile Include="Events\EventObjects\Event.cs" />
+    <Compile Include="Events\EventManager.cs" />
+    <Compile Include="Events\EventObjects\EventWaitingRoom.cs" />
+    <Compile Include="Events\EventPackets\EventPackets.cs" />
+    <Compile Include="Events\GMEvents\TreasureHunt.cs" />
+    <Compile Include="Events\GMEvents\MapleSnowball.cs" />
+    <Compile Include="Events\GMEvents\OlaOla.cs" />
+    <Compile Include="Events\PartyQuests\KerningCity.cs" />
+    <Compile Include="Events\EventObjects\Snowball.cs" />
+    <Compile Include="Events\PartyQuests\PartyQuest.cs" />
+    <Compile Include="Events\PartyQuests\Zakum.cs" />
+    <Compile Include="Events\ThirdJob.cs" />
+    <Compile Include="Events\Trains.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameAcceptor.cs" />
+    <Compile Include="GameObjects\Door.cs" />
+    <Compile Include="GameObjects\Drop.cs" />
+    <Compile Include="GameObjects\INpcScript.cs" />
+    <Compile Include="GameObjects\Item.cs" />
+    <Compile Include="GameObjects\Kite.cs" />
+    <Compile Include="GameObjects\Map.cs" />
+    <Compile Include="GameObjects\MatchCard.cs" />
+    <Compile Include="GameObjects\MemoryGame.cs" />
+    <Compile Include="GameObjects\MiniRoomBase.cs" />
+    <Compile Include="GameObjects\Mist.cs" />
+    <Compile Include="GameObjects\Mob.cs" />
+    <Compile Include="GameObjects\NpcChatSession.cs" />
+    <Compile Include="GameObjects\Omok.cs" />
+    <Compile Include="GameObjects\Pet.cs" />
+    <Compile Include="GameObjects\PlayerShop.cs" />
+    <Compile Include="GameObjects\Reactor.cs" />
+    <Compile Include="GameObjects\Rings.cs" />
+    <Compile Include="GameObjects\Scripting.cs" />
+    <Compile Include="GameObjects\WzReader.cs" />
+    <Compile Include="GameServer.cs" />
+    <Compile Include="Handlers\MessengerHandler.cs" />
+    <Compile Include="Packets\AdminPacket.cs" />
+    <Compile Include="Packets\AttackPacket.cs" />
+    <Compile Include="Packets\BuddyPacket.cs" />
+    <Compile Include="Packets\BuffPacket.cs" />
+    <Compile Include="Packets\CashPacket.cs" />
+    <Compile Include="Packets\CharacterStatsPacket.cs" />
+    <Compile Include="Events\EventPackets\CoconutPackets.cs" />
+    <Compile Include="Packets\CUIMessengerPacket.cs" />
+    <Compile Include="Packets\DropPacket.cs" />
+    <Compile Include="Packets\FamePacket.cs" />
+    <Compile Include="Packets\InventoryPacket.cs" />
+    <Compile Include="Packets\LieDetectorPacket.cs" />
+    <Compile Include="Packets\MapPacket.cs" />
+    <Compile Include="Packets\MessagePacket.cs" />
+    <Compile Include="Packets\MessengerPacket.cs" />
+    <Compile Include="Packets\MiniGamePacket.cs" />
+    <Compile Include="Packets\MiscPacket.cs" />
+    <Compile Include="Packets\MistPacket.cs" />
+    <Compile Include="Packets\MobPacket.cs" />
+    <Compile Include="Packets\NpcPacket.cs" />
+    <Compile Include="Packets\PacketHelper.cs" />
+    <Compile Include="Packets\PartyPacket.cs" />
+    <Compile Include="Packets\PetsPacket.cs" />
+    <Compile Include="Packets\PlayerInteraction.cs" />
+    <Compile Include="Packets\PlayerShopPackets.cs" />
+    <Compile Include="Packets\QuestPacket.cs" />
+    <Compile Include="Packets\ReactorPacket.cs" />
+    <Compile Include="Packets\ReportPacket.cs" />
+    <Compile Include="Packets\SkillPacket.cs" />
+    <Compile Include="Packets\StoragePacket.cs" />
+    <Compile Include="Packets\SummonPacket.cs" />
+    <Compile Include="Packets\TradePacket.cs" />
+    <Compile Include="GameObjects\Party.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptDataChecker.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WvsBeta.BinaryData\WvsBeta.BinaryData.csproj">
+      <Project>{DE29D5BB-CF38-4981-8D9D-7EDB68CFCB06}</Project>
+      <Name>WvsBeta.BinaryData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsBeta.Common\WvsBeta.Common.csproj">
+      <Project>{2D3192B2-DD59-4B95-9F7C-932D743BC617}</Project>
+      <Name>WvsBeta.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsBeta.Database\WvsBeta.Database.csproj">
+      <Project>{7E353D6F-0493-4FB9-982C-358ACC42B418}</Project>
+      <Name>WvsBeta.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsBeta.Logger\WvsBeta.Logger.csproj">
+      <Project>{5BC0C38A-D121-42C1-B2EF-888477C6D8FA}</Project>
+      <Name>WvsBeta.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsBeta.MasterThread\WvsBeta.MasterThread.csproj">
+      <Project>{84164D2F-36B3-4D56-AF4A-BD12C37F71F5}</Project>
+      <Name>WvsBeta.MasterThread</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WvsBeta.ReNX\trunk\reNX.csproj">
+      <Project>{0f5c5f44-238a-45f2-95af-a1936949aef2}</Project>
+      <Name>reNX</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

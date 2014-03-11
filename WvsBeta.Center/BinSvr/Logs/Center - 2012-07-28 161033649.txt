@@ -1,0 +1,5 @@
+[2012-07-28 16:10:33:815] Got exception @ frmMain::InitServer : System.IO.FileNotFoundException: Cannot find config file 'E:\Dropbox Stuff\Dropbox\WvsBeta_REVAMP\WvsBeta.Center\BinSvr\..\DataSvr\Center.img'
+   bij Config.ConfigReader..ctor(String filename) in E:\Dropbox Stuff\Dropbox\WvsBeta_REVAMP\WvsBeta.Database\ConfigReader.cs:regel 23
+   bij WvsBeta.Center.CenterServer.LoadConfig(String configFile) in E:\Dropbox Stuff\Dropbox\WvsBeta_REVAMP\WvsBeta.Center\Server Data\CenterServer.cs:regel 128
+   bij WvsBeta.Center.CenterServer.Init(String configFile) in E:\Dropbox Stuff\Dropbox\WvsBeta_REVAMP\WvsBeta.Center\Server Data\CenterServer.cs:regel 102
+   bij WvsBeta.Center.frmMain.InitializeServer() in E:\Dropbox Stuff\Dropbox\WvsBeta_REVAMP\WvsBeta.Center\frmMain.cs:regel 33
